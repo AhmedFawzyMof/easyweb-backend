@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./components/head.ejs") %>
+  <body class="sub_page">
+    <%- include("./components/nav.ejs") %>
+
+    <section class="contact_section layout_padding" <% if(!eng) { %>
+      dir="rtl" <% } %>>
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            <% if(eng) { %>Book An Appointment<% } else { %> حجز موعد <% } %>
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form_container contact-form">
+              <form action="/service/book" method="POST">
+                <div class="form-row">
+                  <div class="col-lg-6">
+                    <div>
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        placeholder="<% if(eng) { %> Name <% } else { %> الاسم <% } %>"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div>
+                      <input
+                        type="text"
+                        name="phone"
+                        required
+                        placeholder="<% if(eng) { %> Phone Number <% } else { %> هاتف <% } %>"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="<% if(eng) { %> Email <% } else { %> البريد الالكتروني <% } %>"
+                  />
+                </div>
+                <div class="form-row">
+                  <div class="col-lg-6">
+                    <div>
+                      <select name="gender" required id="gender">
+                        <option value="" disabled selected>
+                          <% if(eng) { %> Select Gender <% } else { %> حدد النوع
+                          <% } %>
+                        </option>
+                        <option value="ذكر">
+                          <% if(eng) { %> Male <% } else { %> ذكر <% } %>
+                        </option>
+                        <option value="انثى">
+                          <% if(eng) { %> Female <% } else { %> انثى <% } %>
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div>
+                      <select name="religion" required id="religion">
+                        <option value="" disabled selected>
+                          <% if(eng) { %> Select Religion <% } else { %> حدد
+                          الدين <% } %>
+                        </option>
+                        <option value="مسيحي">
+                          <% if(eng) { %> christian <% } else { %> مسيحي <% } %>
+                        </option>
+                        <option value="مسلم">
+                          <% if(eng) { %> Muslim <% } else { %> مسلم <% } %>
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-lg-6">
+                    <div>
+                      <select name="service" required id="service">
+                        <option value="" disabled selected>
+                          <% if(eng) { %> Select Service <% } else { %> حدد
+                          الخدمة <% } %>
+                        </option>
+                        <% services.forEach(service => { %>
+                        <option value="<%= service.nameAr %>">
+                          <% if(eng) { %> <%= service.name %> <% } else { %> <%=
+                          service.nameAr %> <% } %>
+                        </option>
+                        <% }) %>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div>
+                      <input type="datetime-local" name="date" id="date" />
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_box">
+                  <button>
+                    <% if(eng) { %> Send <% } else { %> ارسال <% } %>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include("./components/footer.ejs") %> <%-
+    include("./components/scripts.ejs") %>
+  </body>
+</html>

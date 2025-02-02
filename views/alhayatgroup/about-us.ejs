@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./components/head.ejs') %>
+  </head>
+  <body class="sub_page">
+    <%- include('./components/nav.ejs') %>
+    <section class="about_section layout_padding" <% if(eng) { %>
+      style="direction: rtl" <% } %>>
+      <div class="container" style="margin-bottom: 16px" dir="rtl">
+        <ul class="list-group">
+          <li class="list-group-item" <% if (!eng) { %>
+            style="text-align: right" <% } %>>
+            <a
+              href="#collapseExample1"
+              data-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample1"
+              class="text-right"
+              style="color: #333"
+            >
+              <% if(eng) { %> Is the service executed upon request? <% } else {
+              %> هل يتم تنفيذ الخدمة عند طلبها؟ <% } %>
+            </a>
+            <div class="collapse" id="collapseExample1">
+              <div class="card card-body">
+                <% if(eng) { %> Once you book the service, you will be contacted
+                by a member of the customer service team and will chat with you
+                to confirm the service request, and you will be notified of the
+                scheduled date. <% }else { %> بمجرد حجز الخدمة يتم التواصل معك
+                من أحد فريق خدمة العملاء والمحادثة معك لتأكيد طلب الخدمة ، ويتم
+                تبليغك بالميعاد المحدد <% } %>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item" <% if (!eng) { %>
+            style="text-align: right" <% } %>>
+            <a
+              href="#collapseExample2"
+              data-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample2"
+              style="color: #333"
+            >
+              <% if(eng) { %> Is it possible to obtain an invoice for the
+              presentation? <% } else { %> هل من الممكن الحصول على فاتورة
+              لتقديمها للتأمين الخاص بي؟ <% } %>
+            </a>
+            <div class="collapse" id="collapseExample2">
+              <div class="card card-body">
+                <% if(eng) { %> We make it possible for you to obtain an invoice
+                for the presentation. <% } else { %> بالطبع نقوم باصدار فواتير
+                ضريبية مختومة مقابل أي خدمة نقدمها, وذلك ليتسنى للعميل تقديمها
+                لاي جهة يريدها <% } %>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item" <% if (!eng) { %>
+            style="text-align: right" <% } %>>
+            <a
+              href="#collapseExample3"
+              data-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample3"
+              style="color: #333"
+            >
+              <% if(eng) { %> What are the home visits? <% } else { %> ما هي
+              أوقات الزيارة المنزلية؟ <% } %>
+            </a>
+            <div class="collapse" id="collapseExample3">
+              <div class="card card-body">
+                <% if(eng) { %> We provide home visits on a continuous basis,
+                without interruption ... from 9 am to 12 pm and from 8 am to 10
+                pm, except on Friday. <% } else { %> نقدم الزيارات المنزلية على
+                مدار الساعة بلا انقطاع ... من الساعة الثامنة صباحا وحتى الساعة
+                العاشرة مساء يوميا باستثناء يوم الجمعة <% } %>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item" <% if (!eng) { %>
+            style="text-align: right" <% } %>>
+            <a
+              href="#collapseExample4"
+              data-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample4"
+              style="color: #333"
+            >
+              <% if(eng) { %> What are the services provided by Al Hayat Group?
+              <% } else { %> ما هي الخدمات التي تقدمها الحياة جروب ؟ <% } %>
+            </a>
+            <div class="collapse" id="collapseExample4">
+              <div class="card card-body">
+                <% if(eng) { %> Al Hayat Group provides a wide range of home
+                medical services. <% } else { %> تقدم الحياة جروب كل الخدمات
+                الطبية فى المنزل. <% } %>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="/elhayagroup/assets/images/about-img.jpg" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6" <% if(!eng) { %>
+            style="text-align: right;" <% } %>>
+            <div class="detail-box">
+              <div class="heading_container">
+                <% if(eng) { %>
+                <h2 style="margin-right: auto">
+                  About
+                  <span style="color: #62d2a2">Us</span>
+                </h2>
+                <% } else { %>
+                <h2 style="color: #62d2a2; margin-left: auto">نبذة عنا</h2>
+                <% } %>
+              </div>
+              <p>
+                <% if(eng) { %> At Al Hayat Group, we are dedicated to
+                redefining healthcare services by bringing compassionate,
+                professional, and high-quality medical care directly to your
+                home. Established with a vision to make healthcare accessible
+                and convenient for everyone, we are committed to enhancing the
+                lives of our patients through personalized care and innovative
+                solutions. Our Mission To provide exceptional home medical
+                services tailored to meet the unique needs of every patient,
+                ensuring comfort, dignity, and the highest standards of care in
+                a safe environment. <% } else { %> في الحيات جروب نحن ملتزمون
+                بإعادة تعريف خدمات الرعاية الصحية من خلال جلب الرعاية الطبية
+                الرحيمة والمهنية والعالية الجودة مباشرة إلى منزلك. تم تأسيسنا
+                برؤية لجعل الرعاية الصحية في متناول الجميع ومريحة، ونحن ملتزمون
+                بتحسين حياة مرضانا من خلال الرعاية الشخصية والحلول المبتكرة.
+                مهمتنا توفير خدمات طبية منزلية استثنائية مصممة لتلبية الاحتياجات
+                الفريدة لكل مريض، وضمان الراحة والكرامة وأعلى معايير الرعاية في
+                بيئة آمنة.<% } %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('./components/footer.ejs') %> <%-
+    include('./components/scripts.ejs') %>
+  </body>
+</html>

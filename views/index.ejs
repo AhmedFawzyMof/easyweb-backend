@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('components/head') %>
+  <body>
+    <%- include('components/navbar') %>
+
+    <main>
+      <div class="hero-wrap">
+        <div class="overlay"></div>
+        <div class="container-fluid" id="wrap">
+          <div
+            class="slider-text d-md-flex align-items-center"
+            data-scrollax-parent="true"
+            id="sh-rtl"
+          >
+            <div
+              class="one-forth ftco-animate align-self-md-center"
+              data-scrollax=" properties: { translateY: '70%' }"
+            >
+              <% if (lang === "ar") {%>
+              <h1 class="mb-4">
+                EASYWEB
+                <strong
+                  class="typewrite"
+                  data-period="4000"
+                  data-type='[ "لتأجير البرمجيات", "لتحسين محركات البحث للمواقع الإلكترونية", "للتكامل مع واجهة برمجة التطبيقات" ]'
+                >
+                  <span class="wrap"></span>
+                </strong>
+              </h1>
+              <% } else { %>
+              <h1 class="mb-4">
+                EASYWEB For
+                <strong
+                  class="typewrite"
+                  data-period="4000"
+                  data-type='[ "Software Rental", "SEO Optimization", "API Integration" ]'
+                >
+                  <span class="wrap"></span>
+                </strong>
+              </h1>
+              <% } %>
+              <p
+                class="mb-md-5 mb-sm-3"
+                data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
+              >
+                <% if (lang === "ar") { %> هدفنا هو تمكين الشركات من جميع
+                الأحجام والصناعات من النجاح في العصر الرقمي. <% } else { %> our
+                goal is to empower businesses of all sizes and industries to
+                thrive in the digital age. <% } %>
+              </p>
+              <p
+                data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
+              >
+                <a href="#Contact" class="btn btn-primary px-4 py-3">
+                  <% if (lang === "ar") { %> اتصل بنا <% }else{ %> Contact Us <%
+                  } %>
+                </a>
+                <a
+                  href="#Services"
+                  class="btn btn-primary btn-outline-primary px-4 py-3"
+                >
+                  <% if(lang === "ar") { %> خدماتنا <% } else { %> Our Services
+                  <% } %>
+                </a>
+              </p>
+            </div>
+            <div
+              class="one-half align-self-md-end align-self-sm-center"
+              data-scrollax="properties: { translateY: '-30%', opacity: 1.6 }"
+            >
+              <img
+                src="images/dashboard_full_2.png"
+                class="img-fluid img"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="ftco-section ftco-section-2">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row" id="sh-rtl">
+            <div class="col-md-8">
+              <h3 class="heading-white">
+                <% if (lang === "ar") { %> نحن نقدم خدمات عالية الجودة <% }else{
+                %> We Provide High Quality Services <% } %>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ftco-section" id="About">
+        <div class="container">
+          <div class="row d-md-flex" id="sh-rtl">
+            <div
+              class="col-md-6 ftco-animate img about-image"
+              style="background-image: url(images/work-5.jpg)"
+            ></div>
+            <div class="col-md-6 ftco-animate p-md-5">
+              <div class="row">
+                <div class="col-md-12 nav-link-wrap mb-5">
+                  <div
+                    class="nav ftco-animate nav-pills"
+                    id="v-pills-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <a
+                      class="nav-link active"
+                      id="v-pills-whatwedo-tab"
+                      data-toggle="pill"
+                      href="#v-pills-whatwedo"
+                      role="tab"
+                      aria-controls="v-pills-whatwedo"
+                      aria-selected="true"
+                    >
+                      <% if (lang === "ar") { %> ماذا نقدم <% }else{ %> What We
+                      Offer <% } %>
+                    </a>
+
+                    <a
+                      class="nav-link"
+                      id="v-pills-mission-tab"
+                      data-toggle="pill"
+                      href="#v-pills-mission"
+                      role="tab"
+                      aria-controls="v-pills-mission"
+                      aria-selected="false"
+                    >
+                      <% if (lang === "ar") { %> مهمتنا <% }else{ %> Our Mission
+                      <% } %>
+                    </a>
+
+                    <a
+                      class="nav-link"
+                      id="v-pills-goal-tab"
+                      data-toggle="pill"
+                      href="#v-pills-goal"
+                      role="tab"
+                      aria-controls="v-pills-goal"
+                      aria-selected="false"
+                    >
+                      <% if (lang === "ar") { %> الهدف <% }else{ %> Our Goal <%
+                      } %>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-12 d-flex align-items-center">
+                  <div class="tab-content ftco-animate" id="v-pills-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="v-pills-whatwedo"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-whatwedo-tab"
+                    >
+                      <div>
+                        <h2 class="mb-4">
+                          <% if (lang === "ar") { %> نحن نقدم خدمات عالية الجودة
+                          <% }else{ %> We Offer High Quality Services <% } %>
+                        </h2>
+                        <p>
+                          <% if (lang === "ar") { %> في EASYWEB، نفخر بتقديم
+                          حلول برمجية عالية الجودة مصممة خصيصًا لتلبية احتياجاتك
+                          الفريدة. تشمل خدماتنا تطوير الويب المتطور وتصميم
+                          التطبيقات البديهية والتكامل السلس للنظام، وكلها مصممة
+                          بدقة واهتمام بالتفاصيل. نحن ملتزمون بضمان الموثوقية
+                          والأداء ورضا المستخدم في كل مشروع، مما يساعدك على
+                          تحقيق أهدافك بثقة وسهولة. <% }else{ %> At EASYWEB, we
+                          pride ourselves on delivering high-quality software
+                          solutions tailored to your unique needs. Our services
+                          include cutting-edge web development, intuitive app
+                          design, and seamless system integrations, all crafted
+                          with precision and attention to detail. We are
+                          dedicated to ensuring reliability, performance, and
+                          user satisfaction in every project, helping you
+                          achieve your goals with confidence and ease.<% } %>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="tab-pane fade"
+                      id="v-pills-mission"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-mission-tab"
+                    >
+                      <div>
+                        <h2 class="mb-4">
+                          <% if (lang === "ar") { %> حلول استثنائية للويب <%
+                          }else{ %> Exceptional Web Solutions <% } %>
+                        </h2>
+                        <p>
+                          <% if (lang === "ar") { %> في EASYWEB، تتمثل مهمتنا في
+                          تبسيط العالم الرقمي من خلال إنشاء حلول برمجية مبتكرة
+                          وسهلة الاستخدام. نحن ملتزمون بتمكين الشركات والأفراد
+                          من خلال الأدوات التي تجعل التكنولوجيا في متناول الجميع
+                          وفعالة وممتعة. من خلال تفانينا في التميز والتعاون
+                          ونجاح العملاء، نهدف إلى تحويل التحديات المعقدة إلى
+                          تجارب سلسة وبديهية. <% }else{ %> At EASYWEB, our
+                          mission is to simplify the digital world by creating
+                          innovative, user-friendly software solutions. We are
+                          committed to empowering businesses and individuals
+                          with tools that make technology accessible, efficient,
+                          and enjoyable. Through our dedication to excellence,
+                          collaboration, and customer success, we aim to
+                          transform complex challenges into seamless, intuitive
+                          experiences. <% } %>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="tab-pane fade"
+                      id="v-pills-goal"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-goal-tab"
+                    >
+                      <div>
+                        <h2 class="mb-4">
+                          <% if (lang === "ar") { %> مساعدة عملائنا <% }else{ %>
+                          Help Our Customer <% } %>
+                        </h2>
+                        <p>
+                          <% if (lang === "ar") { %> في EASYWEB، هدفنا هو تمكين
+                          الشركات من جميع الأحجام والصناعات من النجاح في العصر
+                          الرقمي. نسعى جاهدين لتزويد كل شركة بالفرصة لإنشاء حضور
+                          قوي على الإنترنت من خلال حلول مبتكرة وبأسعار معقولة
+                          وقابلة للتخصيص. من خلال سد الفجوة بين التكنولوجيا
+                          وإمكانية الوصول، نهدف إلى مساعدة الشركات على تحقيق
+                          إمكاناتها الكاملة والتواصل مع جماهيرها في جميع أنحاء
+                          العالم. <% }else{ %> At EASYWEB, our goal is to
+                          empower businesses of all sizes and industries to
+                          thrive in the digital age. We strive to provide every
+                          business with the opportunity to establish a strong
+                          online presence through innovative, affordable, and
+                          customizable solutions. By bridging the gap between
+                          technology and accessibility, we aim to help
+                          businesses reach their full potential and connect with
+                          their audiences worldwide. <% } %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="ftco-section ftco-services" id="Services">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mb-2">
+              <% if (lang === "ar") { %> خدماتنا <% }else{ %> Our Services <% }
+              %>
+            </h2>
+          </div>
+        </div>
+        <div class="row" id="sh-rtl">
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center">
+                <div class="icon"><span class="flaticon-research"></span></div>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">
+                  <% if (lang === "ar") { %> تطوير المواقع <% }else{ %> Web
+                  Development <% } %>
+                </h3>
+                <p>
+                  <% if (lang === "ar") { %> قم بتطوير مواقع ويب أو تطبيقات ويب
+                  سريعة الاستجابة وديناميكية باستخدام أطر عمل مثل React وVue.js
+                  وتقنيات الواجهة الخلفية مثل Node.js أو Laravel.<% }else{ %>
+                  Develop responsive and dynamic websites or web applications
+                  using frameworks like React, Vue.js and backend technologies
+                  like Node.js, or Laravel. <%} %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center">
+                <div class="icon">
+                  <span class="flaticon-creativity"></span>
+                </div>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">
+                  <% if (lang === "ar") { %> تطوير تطبيقات الهاتف المحمول <%
+                  }else{ %> Mobile App Development <% } %>
+                </h3>
+                <p>
+                  <% if (lang === "ar") { %> قم بإنشاء تطبيقات جوال لنظامي
+                  التشغيل Android و iOS باستخدام أطر عمل مثل Ionic أو React
+                  Native، لضمان الأداء السلس وتجربة المستخدم. <% } else { %>
+                  Build mobile apps for Android and iOS using frameworks like
+                  Ionic or React Native, ensuring smooth performance and user
+                  experience. <% } %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center">
+                <div class="icon"><span class="flaticon-market"></span></div>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">
+                  <% if (lang === "ar") { %> تطوير البرمجيات المخصصة <% }else{
+                  %> Custom Software Development <% } %>
+                </h3>
+                <p>
+                  <% if (lang === "ar") { %> إنشاء حلول برمجية مخصصة لتلبية
+                  احتياجات العمل المحددة، مثل أنظمة إدارة المخزون، أو أدوات
+                  إدارة علاقات العملاء، أو أتمتة سير العمل.<% } else { %> Build
+                  tailored software solutions to address specific business
+                  needs, such as inventory management systems, CRM tools, or
+                  workflow automation. <% } %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-wrap mt-5">
+        <div class="row d-flex no-gutters" id="sh-rtl">
+          <div
+            class="col-md-6 img ftco-animate"
+            style="background-image: url(images/about.jpg)"
+          ></div>
+          <div class="col-md-6 d-flex">
+            <div class="services-wrap">
+              <div class="heading-section mb-5 ftco-animate">
+                <h2 class="mb-2">
+                  <% if (lang === "ar") { %> خدمات اخرى <% }else{ %> Other
+                  Services <% } %>
+                </h2>
+              </div>
+              <div class="list-services d-flex ftco-animate">
+                <div
+                  class="icon d-flex justify-content-center align-items-center"
+                >
+                  <span class="icon-pencil"></span>
+                </div>
+                <div class="text">
+                  <h3>
+                    <% if (lang === "ar") { %> كشط الويب واستخراج البيانات <%
+                    }else{ %> Web Scraping and Data Extraction <% } %>
+                  </h3>
+                  <p>
+                    <% if (lang === "ar") { %> استخرج البيانات المنظمة من مواقع
+                    الويب للحصول على رؤى أو تحليلات أو أتمتة باستخدام أدوات مثل
+                    BeautifulSoup أو Scrapy أو Selenium من Python. قدم خدمات مثل
+                    أبحاث السوق أو مراقبة الأسعار أو تحليل المنافسين. <% }else{
+                    %> Extract structured data from websites for insights,
+                    analysis, or automation using tools like Python’s
+                    BeautifulSoup, Scrapy, or Selenium. Offer services like
+                    market research, price monitoring, or competitor analysis.
+                    <% } %>
+                  </p>
+                </div>
+              </div>
+              <div class="list-services d-flex ftco-animate">
+                <div
+                  class="icon d-flex justify-content-center align-items-center"
+                >
+                  <span class="icon-web"></span>
+                </div>
+                <div class="text">
+                  <h3>
+                    <% if (lang === "ar") { %> تطوير API <% }else{ %> API
+                    Development and Integration <% } %>
+                  </h3>
+                  <p>
+                    <% if (lang === "ar") { %> تصميم وتطوير واجهات برمجة
+                    التطبيقات REST أو GraphQL ودمج واجهات برمجة التطبيقات
+                    التابعة لجهات خارجية لبوابات الدفع أو مزامنة البيانات أو
+                    الخدمات الخارجية. <% } else { %>Design and develop RESTful
+                    or GraphQL APIs and integrate third-party APIs for payment
+                    gateways, data synchronization or external services. <% } %>
+                  </p>
+                </div>
+              </div>
+              <div class="list-services d-flex ftco-animate">
+                <div
+                  class="icon d-flex justify-content-center align-items-center"
+                >
+                  <span class="icon-pie-chart"></span>
+                </div>
+                <div class="text">
+                  <h3>
+                    <% if (lang === "ar") { %> مراقبة وصيانة البرمجيات <% }else{
+                    %> Software Maintenance and Debugging <% } %>
+                  </h3>
+                  <p>
+                    <% if (lang === "ar") { %> توفير الدعم المستمر للتطبيقات
+                    الحالية وإصلاح الأخطاء وتحسين الأداء وضمان أمان البرامج
+                    وموثوقيتها. <% }else{ %> Provide ongoing support for
+                    existing applications, fix bugs, optimize performance, and
+                    ensure software security and reliability. <%}%>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-work" id="Projects">
+      <div class="container-fluid">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mb-2">
+              <% if (lang === "ar") { %> مشاريع متاحة للإيجار <% }else{ %>
+              Projects Available For Rent <% } %>
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <% projects.forEach(project => { %>
+          <div class="col-md-4 ftco-animate">
+            <div class="work-entry">
+              <a
+                href="<%= project.url %>"
+                class="img"
+                style="
+                  background-image: url(<%= project.image %>);
+                  background-size: contain;
+                "
+                target="_blank"
+              >
+                <div
+                  class="text d-flex justify-content-center align-items-center"
+                >
+                  <div class="p-3">
+                    <h3>
+                      <% if(lang === "ar") { %><%= project.name_ar %><% } else {
+                      %><%= project.name %><% } %>
+                    </h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+    <section class="ftco-section bg-light" id="Pricing">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mb-3">
+              <% if (lang === "ar") { %> أفضل الأسعار لدينا <% }else{ %> Our
+              Best Pricing <% } %>
+            </h2>
+          </div>
+        </div>
+        <div class="row" id="sh-rtl">
+          <div class="col-md-4 ftco-animate">
+            <div class="block-7">
+              <div class="text-center">
+                <h2 class="heading">
+                  <% if (lang === "ar") { %> موقع بسيط <% } else { %> Simple
+                  Website <% } %>
+                </h2>
+                <span class="price">
+                  <sup>L.E</sup> <span class="number">2500</span>
+                </span>
+                <a
+                  href="#Contact"
+                  class="btn btn-primary d-block px-2 py-3 mb-4"
+                >
+                  <% if (lang === "ar") { %> ابدأ الآن <% } else { %> Get
+                  Started Now <% } %>
+                </a>
+
+                <h3 class="heading-2 mb-4">
+                  <% if (lang === "ar") { %> استمتع بجميع المميزات <% } else {
+                  %> Enjoy All The Features <% } %>
+                </h3>
+
+                <p>
+                  <% if (lang === "ar") { %> جذب المزيد من العملاء: عزز وجودك
+                  عبر الإنترنت للوصول إلى جمهور أوسع من العملاء المحتملين. <% }
+                  else { %> Attract More Customers: Enhance your online presence
+                  to reach a larger audience of potential clients. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> تبسيط العمليات: تواصل مع العملاء
+                  وقم بإدارة الطلبات بنقرات قليلة فقط. <% } else { %> Streamline
+                  Operations: Connect with customers and handle orders with just
+                  a few clicks. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> اكتسب ميزة تنافسية: كن متقدماً على
+                  منافسيك من خلال منصة حديثة وسهلة الاستخدام. <% } else { %>
+                  Gain a Competitive Edge: Stay ahead of your competitors with a
+                  modern and user-friendly platform. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> ابدأ الآن مقابل 2000 جنيه فقط
+                  واستمتع بدعم مستمر مقابل 500 جنيه شهريًا. <% } else { %> Get
+                  started for just 2,000 EGP and enjoy ongoing support for only
+                  500 EGP per month. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> مثالي للشركات الصغيرة التي تتطلع
+                  إلى توسيع نطاقها وزيادة قاعدة عملائها. ابدأ رحلتك نحو النجاح
+                  اليوم! <% } else { %> Perfect for small businesses looking to
+                  expand their reach and grow their customer base. Start your
+                  journey to success today! <% } %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="block-7">
+              <div class="text-center">
+                <h2 class="heading">
+                  <% if (lang === "ar") { %> موقع مع تطبيق أندرويد <% } else {
+                  %> Website With Android <% } %>
+                </h2>
+                <span class="price">
+                  <sup>L.E</sup> <span class="number">5000</span>
+                </span>
+                <a
+                  href="#Contact"
+                  class="btn btn-primary btn-outline-primary d-block px-3 py-3 mb-4"
+                >
+                  <% if (lang === "ar") { %> ابدأ الآن <% } else { %> Get
+                  Started Now <% } %>
+                </a>
+
+                <h3 class="heading-2 mb-4">
+                  <% if (lang === "ar") { %> استمتع بجميع المميزات <% } else {
+                  %> Enjoy All The Features <% } %>
+                </h3>
+
+                <p>
+                  <% if (lang === "ar") { %> جذب المزيد من العملاء: عزز وجودك
+                  عبر الإنترنت للوصول إلى جمهور أوسع من العملاء المحتملين. <% }
+                  else { %> Attract More Customers: Boost your online presence
+                  to reach a larger audience of potential clients. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> تبسيط العمليات: إدارة قوائم
+                  المنتجات بسهولة، والتواصل مع العملاء، وإتمام المعاملات ببضع
+                  نقرات فقط. <% } else { %> Simplify Operations: Easily manage
+                  your product listings, connect with customers, and handle
+                  transactions with just a few clicks. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> اكتسب ميزة تنافسية: كن متقدماً على
+                  المنافسة من خلال منصة حديثة وسهلة الاستخدام. <% } else { %>
+                  Gain a Competitive Edge: Stay ahead of the competition with a
+                  modern and user-friendly platform. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> ميزة جديدة: استمتع بتطبيق أندرويد
+                  مخصص مع عرض ويب، مما يجعل منصتك متاحة على الأجهزة المحمولة. <%
+                  } else { %> New Feature: Enjoy the convenience of a dedicated
+                  Android app with a web-view, making your platform accessible
+                  on mobile devices. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> ابدأ الآن مقابل 4000 جنيه فقط
+                  واستمر في الاستفادة من دعمنا مقابل 1000 جنيه شهريًا. <% } else
+                  { %> Get started for just 4,000 EGP and continue enjoying our
+                  support for only 1,000 EGP per month. <% } %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="block-7">
+              <div class="text-center">
+                <h2 class="heading">
+                  <% if (lang === "ar") { %> برامج مخصصة <% } else { %> Custom
+                  Software <% } %>
+                </h2>
+                <span class="price"
+                  ><span class="number">
+                    <% if (lang === "ar") { %> مخصص <% } else { %> Custom <% }
+                    %>
+                  </span></span
+                >
+                <a
+                  href="#Contact"
+                  class="btn btn-primary btn-outline-primary d-block px-3 py-3 mb-4"
+                >
+                  <% if (lang === "ar") { %> ابدأ الآن <% } else { %> Get
+                  Started Now <% } %>
+                </a>
+
+                <h3 class="heading-2 mb-4">
+                  <% if (lang === "ar") { %> استمتع بجميع المميزات <% } else {
+                  %> Enjoy All The Features <% } %>
+                </h3>
+
+                <p>
+                  <% if (lang === "ar") { %> مصمم خصيصًا لاحتياجاتك: احصل على
+                  برنامج مخصص لعملك لضمان الكفاءة والتوسع. <% } else { %>
+                  Tailored to Your Needs: Get software designed specifically for
+                  your business requirements, ensuring efficiency and
+                  scalability. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> زيادة الإنتاجية: أتمتة المهام،
+                  وتبسيط العمليات، وتحسين تجربة العملاء من خلال حلول ذكية. <% }
+                  else { %> Boost Productivity: Automate tasks, streamline
+                  operations, and enhance customer experiences with intuitive
+                  solutions. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> البقاء في المقدمة: استفد من أحدث
+                  التقنيات لاكتساب ميزة تنافسية في مجالك. <% } else { %> Stay
+                  Ahead of the Competition: Leverage cutting-edge technology to
+                  gain a competitive edge in your industry. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> التوافق عبر المنصات: سواء كنت بحاجة
+                  إلى تطبيق ويب، برنامج سطح مكتب، أو تطبيق جوال، نحن نوفر لك
+                  الحل. <% } else { %> Cross-Platform Compatibility: Whether you
+                  need a web app, desktop software, or a mobile application,
+                  we’ve got you covered. <% } %>
+                </p>
+
+                <p>
+                  <% if (lang === "ar") { %> ابدأ الآن بحل مخصص بسعر مناسب
+                  واستمتع بدعم مستمر لضمان عمل نظامك بسلاسة. <% } else { %> Get
+                  started with a custom solution at an affordable price and
+                  enjoy ongoing support to keep your system running smoothly. <%
+                  } %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ftco-section contact-section ftco-degree-bg" id="Contact">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info" id="sh-rtl">
+          <div class="col-md-12 mb-4">
+            <h2 class="h4">
+              <% if (lang === "ar") { %> معلومات الاتصال <% } else { %> Contact
+              Information <% } %>
+            </h2>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-md-3">
+            <p>
+              <span
+                ><% if (lang === "ar") { %> الهاتف: <% } else { %> Phone: <% }
+                %></span
+              >
+              <a href="tel://+201212158465">01212158465</a>
+            </p>
+          </div>
+          <div class="col-md-3">
+            <p>
+              <span
+                ><% if (lang === "ar") { %> الهاتف: <% } else { %> Phone: <% }
+                %></span
+              >
+              <a href="tel://+01147098469">01147098469</a>
+            </p>
+          </div>
+          <div class="col-md-3" id="sh-rtl">
+            <p>
+              <span
+                ><% if (lang === "ar") { %> البريد الإلكتروني: <% } else { %>
+                Email: <% } %></span
+              >
+              <a href="mailto:ezweb2024@gmail.com">ezweb2024@gmail.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="row block-9" id="sh-rtl">
+          <div class="col-md-6 pr-md-5">
+            <form action="/contact" method="POST">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="<% if (lang === 'ar') { %> اسمك <% } else { %> Your Name <% } %>"
+                  name="name"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="<% if (lang === 'ar') { %> بريدك الإلكتروني <% } else { %> Your Email <% } %>"
+                  name="email"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="sh-rtl"
+                  placeholder="<% if (lang === 'ar') { %> رقم هاتفك <% } else { %> Your Phone Number <% } %>"
+                  name="phone"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  id="Message"
+                  cols="30"
+                  rows="7"
+                  class="form-control"
+                  placeholder="<% if (lang === 'ar') { %> رسالتك <% } else { %> Message <% } %>"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="<% if (lang === 'ar') { %> أرسل الرسالة <% } else { %> Send Message <% } %>"
+                  class="btn btn-primary py-3 px-5"
+                />
+              </div>
+            </form>
+          </div>
+
+          <div
+            class="col-md-6"
+            style="
+              background-image: url(/images/bg_1.jpg);
+              background-size: contain;
+              background-repeat: no-repeat;
+            "
+          ></div>
+        </div>
+      </div>
+    </section>
+    <%- include('components/footer') %> <%- include('components/scripts') %>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<div class="hero_area">
+  <header class="header_section" <% if (!eng) { %>
+    dir="rtl" <% } %> >
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="/elhayatgroup">
+          <span>
+            <% if (eng) { %> Al Hayat Group <% } else { %> الحيات جروب <% } %>
+          </span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">
+                <% if (eng) { %> Home <% } else { %> الصفحة الرئيسية <% } %>
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/elhayatgroup/about">
+                <% if (eng) { %> About <% } else { %> حول <% } %>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/elhayatgroup/services">
+                <% if (eng) { %> Services <% } else { %> الخدمات <% } %>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/elhayatgroup/contact">
+                <% if (eng) { %> Contact Us <% } else { %> اتصل بنا <% } %>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/elhayatgroup/book">
+                <% if (eng) { %> Booking <% } else { %> الحجز <% } %>
+              </a>
+            </li>
+            <li class="nav-item">
+              <% if (eng) { %>
+              <a class="nav-link" href="/elhayatgroup/lang/ar">عربى</a>
+              <% } else { %>
+              <a class="nav-link" href="/elhayatgroup/lang/en">English</a>
+              <% } %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+</div>

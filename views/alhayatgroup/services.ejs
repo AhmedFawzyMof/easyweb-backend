@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./components/head.ejs") %>
+  <body class="sub_page">
+    <%- include("./components/nav.ejs") %>
+
+    <section class="department_section layout_padding">
+      <div class="department_container">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2><% if(eng) { %>Our Services<% } else { %>خدماتنا<% } %></h2>
+          </div>
+          <div class="row">
+            <% services.forEach(service => { %>
+            <a
+              href="/elhayatgroup/service/<%= service.slug %>"
+              class="col-md-3"
+              style="color: #333"
+            >
+              <div class="box">
+                <div class="img-box">
+                  <img src="<%= service.thumbnail %>" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5><%= eng ? service.name : service.nameAr %></h5>
+                  <p>
+                    <%= eng ? service.description.slice(0, 125) :
+                    service.descriptionAr.slice(0, 125) %>...
+                  </p>
+                </div>
+              </div>
+            </a>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include("./components/footer.ejs") %> <%-
+    include("./components/scripts.ejs") %>
+  </body>
+</html>

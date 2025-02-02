@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./components/head.ejs') %>
+  </head>
+  <body class="sub_page">
+    <%- include('./components/nav.ejs') %>
+    <section class="about_section layout_padding" <% if(eng) { %>
+      style="direction: rtl" <% } %>>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="<%= service.thumbnail %>" alt="<%= service.name %>" />
+            </div>
+          </div>
+          <div class="col-md-6" <% if(!eng) { %>
+            style="text-align: right;" <% } %>>
+            <div class="detail-box">
+              <div class="heading_container">
+                <% if(eng) { %>
+                <h2 style="margin-right: auto"><%= service.name %></h2>
+                <% } else { %>
+                <h2 style="color: #62d2a2; margin-left: auto">
+                  <%= service.nameAr %>
+                </h2>
+                <% } %>
+              </div>
+              <p>
+                <% if(eng) { %> <%= service.description %> <% } else { %> <%=
+                service.descriptionAr %> <% } %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('./components/footer.ejs') %> <%-
+    include('./components/scripts.ejs') %>
+  </body>
+</html>
