@@ -6,6 +6,8 @@ const {
   validateToken,
   validateTeacher,
 } = require("../../middleware/Validate.Middleware");
+const { VistorMiddleware } = require("../../middleware/Vistor.Middleware");
+
 const {
   GetQuestionsBank,
   SubmitAnswers,
@@ -29,15 +31,31 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.get("/bank", validateToken, GetQuestionsBank);
-router.get("/all/:stage/:term", validateTeacher, AllQuestions);
-router.get("/students/:stage/:term", validateTeacher, StudentQuestionsBank);
+router.get("/bank", VistorMiddleware, validateToken, GetQuestionsBank);
+router.get(
+  "/all/:stage/:term",
+  VistorMiddleware,
+  validateTeacher,
+  AllQuestions
+);
+router.get(
+  "/students/:stage/:term",
+  VistorMiddleware,
+  validateTeacher,
+  StudentQuestionsBank
+);
 router.get(
   "/teacher/answers/:stage/:term/:student_id",
+  VistorMiddleware,
   validateTeacher,
   StudentAnswers
 );
-router.get("/connect/:type/:stage/:term", validateTeacher, GetTypeData);
+router.get(
+  "/connect/:type/:stage/:term",
+  VistorMiddleware,
+  validateTeacher,
+  GetTypeData
+);
 router.post("/", validateToken, SubmitAnswers);
 router.post("/create", validateTeacher, upload.single("image"), CreateQuestion);
 router.post(

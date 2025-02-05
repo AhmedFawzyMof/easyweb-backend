@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-
 const controller = require("../../controllers/talgtna/Orders.controller");
+const { VistorMiddleware } = require("../../middleware/Vistor.Middleware");
 
-router.post("/", controller.AddOrder);
-router.get("/history", controller.GetOrders);
+router.post("/", VistorMiddleware, controller.AddOrder);
+router.get("/history", VistorMiddleware, controller.GetOrders);
 
 module.exports = router;

@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const controller = require("../../controllers/talgtna/Users.controller");
+const { VistorMiddleware } = require("../../middleware/Vistor.Middleware");
 
-router.post("/fav", controller.AddToFav);
-router.get("/favorites", controller.GetFavorites);
-router.get("/coupons", controller.GetCoupons);
+router.post("/fav", VistorMiddleware, controller.AddToFav);
+router.get("/favorites", VistorMiddleware, controller.GetFavorites);
+router.get("/coupons", VistorMiddleware, controller.GetCoupons);
 
 module.exports = router;

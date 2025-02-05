@@ -1,12 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const controller = require("../../controllers/eshopper/Products.controller");
+const { VistorMiddleware } = require("../../middleware/Vistor.Middleware");
 
-router.get("/get/:id", controller.ProductById);
-router.get("/search/:query/:limit", controller.ProductBySearch);
-router.get("/:limit", controller.AllProducts);
-router.post("/filter", controller.ProductsFilter);
-router.post("/search", controller.ProductsBySearch);
-router.post("/cart", controller.CartProducts);
+router.get("/get/:id", VistorMiddleware, controller.ProductById);
+router.get(
+  "/search/:query/:limit",
+  VistorMiddleware,
+  controller.ProductBySearch
+);
+router.get("/:limit", VistorMiddleware, controller.AllProducts);
+router.post("/filter", VistorMiddleware, controller.ProductsFilter);
+router.post("/search", VistorMiddleware, controller.ProductsBySearch);
+router.post("/cart", VistorMiddleware, controller.CartProducts);
 
 module.exports = router;

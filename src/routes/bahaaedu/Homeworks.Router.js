@@ -19,6 +19,8 @@ const {
   validateTeacher,
 } = require("../../middleware/Validate.Middleware");
 
+const { VistorMiddleware } = require("../../middleware/Vistor.Middleware");
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "./public/homework");
@@ -30,7 +32,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.get("/", validateToken, GetHomeworks);
+router.get("/", VistorMiddleware, validateToken, GetHomeworks);
 router.post("/create", validateTeacher, upload.single("cover"), CreateHomework);
 router.post(
   "/updates",
@@ -38,18 +40,34 @@ router.post(
   upload.single("cover"),
   UpdateHomework
 );
-router.get("/results", validateToken, Results);
-router.get("/:id", validateToken, GetHomeworkQuestions);
-router.get("/all/:limit", validateToken, GetAllHomeworks);
-router.get("/techer/:type/:id", validateTeacher, HomeworkDitails);
+router.get("/results", VistorMiddleware, validateToken, Results);
+router.get("/:id", VistorMiddleware, validateToken, GetHomeworkQuestions);
+router.get("/all/:limit", VistorMiddleware, validateToken, GetAllHomeworks);
+router.get(
+  "/techer/:type/:id",
+  VistorMiddleware,
+  validateTeacher,
+  HomeworkDitails
+);
 router.get(
   "/techer/answers/:homework_id/:student_id",
+  VistorMiddleware,
   validateTeacher,
   HomeworkAnswers
 );
-router.get("/student/answers/:homework_id", validateToken, HomeworkAnswers);
+router.get(
+  "/student/answers/:homework_id",
+  VistorMiddleware,
+  validateToken,
+  HomeworkAnswers
+);
 router.post("/:id", validateToken, SubmitHomework);
 router.delete("/:id", validateTeacher, DeleteHomework);
-router.get("/getall/:stage/:limit", validateTeacher, GetAllHomeworksTeacher);
+router.get(
+  "/getall/:stage/:limit",
+  VistorMiddleware,
+  validateTeacher,
+  GetAllHomeworksTeacher
+);
 
 module.exports = router;
