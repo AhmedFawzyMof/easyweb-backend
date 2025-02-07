@@ -1,0 +1,1 @@
+.successmessage{width:500px;background:#eee;padding:30px 20px;border-radius:5px;box-shadow:-2px 2px 3px 3px #33333369;display:grid;place-items:center;gap:30px;text-transform:capitalize}@media (max-width: 500px){.successmessage{width:95%}}

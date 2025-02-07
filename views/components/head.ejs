@@ -26,7 +26,7 @@
 
   <link rel="stylesheet" href="/css/flaticon.css" />
   <link rel="stylesheet" href="/css/icomoon.css" />
-  <link rel="stylesheet" href="<%= lang === "ar" ? "/css/styleRtl.css" :
+  <link rel="stylesheet" href="<%= lang !== "en" ? "/css/styleRtl.css" :
   "/css/style.css"%>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
@@ -40,7 +40,7 @@
   />
 
   <title>
-    <% if (lang === "ar") { %> EASYWEB | حلول الويب الخاصة بك ببساطة <% } else {
+    <% if (lang !== "en") { %> EASYWEB | حلول الويب الخاصة بك ببساطة <% } else {
     %> EASYWEB | Your Web Solution Simplified <% } %>
   </title>
 </head>

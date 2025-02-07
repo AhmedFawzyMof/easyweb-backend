@@ -48,6 +48,9 @@ app.use("/bahaaapi/teacher", require("./routes/bahaaedu/Teacher.Router"));
 app.use("/bahaaapi/grades", require("./routes/bahaaedu/Grades.Router"));
 app.use("/bahaaapi/videos", require("./routes/bahaaedu/Videos.Router"));
 // bahaaedu
+// elmanzel
+app.use("/elmanzel/api", require("./routes/elmanzel/index"));
+// elmanzel
 app.get("*", (req, res, next) => {
   if (req.path.startsWith("/eshopper")) {
     res.sendFile(
@@ -59,6 +62,10 @@ app.get("*", (req, res, next) => {
     );
   } else if (req.path.startsWith("/bahaaedu")) {
     res.sendFile(path.join(__dirname, "..", "public/bahaaedu", "index.html"));
+  } else if (req.url.startsWith("/elmanzel")) {
+    res.sendFile(
+      path.resolve(__dirname, "..", "/public/elmanzel", "index.html")
+    );
   } else {
     next();
   }

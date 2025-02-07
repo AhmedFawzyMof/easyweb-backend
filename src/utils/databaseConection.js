@@ -16,7 +16,12 @@ function ElhayaGroupConnection() {
 }
 
 function BahaaEduConnection() {
-  const db = new sqlite3.Database(`./src/config/database/bahaaedu.db3`);
+  const db = new sqlite3.Database(`./src/config/database/bahaa.db3`);
+  return db;
+}
+
+function ElManzelConnection() {
+  const db = new sqlite3.Database(`./src/database/elbaytbaytk.sqlite`);
   return db;
 }
 
@@ -25,4 +30,5 @@ module.exports = {
   TalgatnaConnection,
   ElhayaGroupConnection,
   BahaaEduConnection,
+  ElManzelConnection,
 };

@@ -3,7 +3,7 @@ const ContactModel = require("../../models/default/Contact.model");
 
 const HomePage = async (req, res) => {
   if (!req.cookies.lang) {
-    res.cookie("lang", "en");
+    res.cookie("lang", "ar");
   }
   const Projects = await new ProjectModel().GetProjects();
   res.render("index", { projects: Projects, lang: req.cookies.lang });
