@@ -21,7 +21,7 @@ function BahaaEduConnection() {
 }
 
 function ElManzelConnection() {
-  const db = new sqlite3.Database(`./src/database/elbaytbaytk.sqlite`);
+  const db = new sqlite3.Database(`./src/config/database/elbaytbaytk.sqlite`);
   return db;
 }
 

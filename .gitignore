@@ -1,4 +1,4 @@
 node_modules
 package-lock.json
-easyweb.zip
+easyweb*.zip
 .env

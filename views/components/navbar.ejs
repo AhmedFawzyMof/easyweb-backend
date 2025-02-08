@@ -43,9 +43,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <% if (lang !== "en") { %>
+          <% if (lang === "en") { %>
           <a href="/ar" class="nav-link">عربي</a>
-          <% } else { %>
+          <% } %> <% if (lang === "ar") { %>
           <a href="/en" class="nav-link">English</a>
           <% } %>
         </li>
@@ -66,115 +66,3 @@
     </div>
   </div>
 </nav>
-<div id="ftco-loader" class="show fullscreen">
-  <svg class="circular" width="48px" height="48px">
-    <circle
-      class="path-bg"
-      cx="24"
-      cy="24"
-      r="22"
-      fill="none"
-      stroke-width="4"
-      stroke="#eeeeee"
-    />
-    <circle
-      class="path"
-      cx="24"
-      cy="24"
-      r="22"
-      fill="none"
-      stroke-width="4"
-      stroke-miterlimit="10"
-      stroke="#F96D00"
-    />
-  </svg>
-</div>
-<div
-  class="modal fade sh-rtl"
-  id="modalRequest"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="modalRequestLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalRequestLabel">
-          <% if (lang !== "en") { %> اتصل بنا <% } else { %> Contact Us <% } %>
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="/contact" method="POST">
-          <div class="form-group">
-            <label for="appointment_name" class="text-black sr-only">
-              <% if (lang !== "en") { %> الاسم الكامل <% } else { %> Full Name
-              <% } %>
-            </label>
-            <input
-              type="text"
-              name="name"
-              class="form-control"
-              id="appointment_name"
-              placeholder="<% if (lang === 'ar') { %> الاسم الكامل <% } else { %> Full Name <% } %>"
-            />
-          </div>
-          <div class="form-group">
-            <label for="appointment_email" class="text-black sr-only">
-              <% if (lang !== "en") { %> البريد الإلكتروني <% } else { %> Email
-              <% } %>
-            </label>
-            <input
-              type="text"
-              class="form-control"
-              name="email"
-              id="appointment_email"
-              placeholder="<% if (lang === 'ar') { %> البريد الإلكتروني <% } else { %> Email <% } %>"
-            />
-          </div>
-          <div class="form-group">
-            <label for="appointment_phone" class="text-black sr-only">
-              <% if (lang !== "en") { %> رقم الهاتف <% } else { %> Phone <% } %>
-            </label>
-            <input
-              type="tel"
-              class="form-control sh-rtl"
-              name="phone"
-              id="appointment_phone"
-              placeholder="<% if (lang === 'ar') { %> رقم الهاتف <% } else { %> Phone <% } %>"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="appointment_message" class="text-black sr-only">
-              <% if (lang !== "en") { %> الرسالة <% } else { %> Message <% } %>
-            </label>
-            <textarea
-              id="appointment_message"
-              class="form-control"
-              name="message"
-              cols="30"
-              rows="10"
-              placeholder="<% if (lang === 'ar') { %> الرسالة <% } else { %> Message <% } %>"
-            ></textarea>
-          </div>
-          <div class="form-group">
-            <input
-              type="submit"
-              value="<% if (lang === 'ar') { %> اتصل بنا <% } else { %> Contact Us <% } %>"
-              class="btn btn-primary"
-            />
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>

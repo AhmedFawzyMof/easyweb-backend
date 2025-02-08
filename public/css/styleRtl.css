@@ -518,6 +518,10 @@ mark,
   height: auto;
 }
 
+#sh-rtl {
+  direction: rtl;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;

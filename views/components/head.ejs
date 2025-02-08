@@ -26,8 +26,7 @@
 
   <link rel="stylesheet" href="/css/flaticon.css" />
   <link rel="stylesheet" href="/css/icomoon.css" />
-  <link rel="stylesheet" href="<%= lang !== "en" ? "/css/styleRtl.css" :
-  "/css/style.css"%>" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -43,4 +42,17 @@
     <% if (lang !== "en") { %> EASYWEB | حلول الويب الخاصة بك ببساطة <% } else {
     %> EASYWEB | Your Web Solution Simplified <% } %>
   </title>
+  <script>
+    if (document.cookie.indexOf("lang=ar") > -1) {
+      let ar = document.createElement("link");
+      ar.rel = "stylesheet";
+      ar.href = "/css/styleRtl.css";
+      document.head.appendChild(ar);
+    } else {
+      let en = document.createElement("link");
+      en.rel = "stylesheet";
+      en.href = "/css/style.css";
+      document.head.appendChild(en);
+    }
+  </script>
 </head>

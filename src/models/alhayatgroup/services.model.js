@@ -54,9 +54,7 @@ const services = {
       ElhayaGroupConnection()
         .get(`SELECT * FROM services where slug = ?;`, slug, (err, rows) => {
           if (err) reject(err);
-          rows.forEach((service) => {
-            service.thumbnail = service.thumbnail.replace("static", "");
-          });
+          rows.thumbnail = rows.thumbnail.replace("static", "");
           resolve(rows);
         })
         .close();
